@@ -4,9 +4,6 @@
 # macOS
 .DS_Store
 
-# Large input dataset (download separately — see README)
-online_retail.csv
-
 # Claude Code
 .claude/
 
