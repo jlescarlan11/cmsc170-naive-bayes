@@ -1,6 +1,6 @@
 """
 Manual Naive Bayes Classifier for Order Cancellation Prediction
-Follows the discrete/categorical approach from CMSC 170 course pack (golf example, p.27-31)
+Follows the discrete/categorical approach from CMSC 170 course pack
 
 Features used: QuantityCat, UnitPriceCat, InvoiceMonth, InvoiceHour, Country
 Target: IsCancelled (0 = Not Cancelled, 1 = Cancelled)
