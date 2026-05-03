@@ -1,6 +1,6 @@
 # CMSC 170 — Manual Naive Bayes Classifier for Order Cancellation Prediction
 
-A from-scratch Naive Bayes classifier that predicts whether an online retail order will be cancelled. Built following the discrete/categorical approach from the CMSC 170 course pack (golf example, pp. 27–31).
+A from-scratch Naive Bayes classifier that predicts whether an online retail order will be cancelled. Built following the discrete/categorical approach from the CMSC 170 course pack.
 
 ## Features Used
 
@@ -17,7 +17,6 @@ A from-scratch Naive Bayes classifier that predicts whether an online retail ord
 ## Prerequisites
 
 - Python 3.10 or higher (developed on Python 3.14.4)
-- The `online_retail.csv` dataset placed in the project root
 
 ## Setup
 
@@ -40,16 +39,6 @@ source .venv/bin/activate        # macOS / Linux
 
 ```bash
 pip install -r requirements.txt
-```
-
-**4. Add the dataset**
-
-Place your `online_retail.csv` file in the project root directory. The file is not included in the repository due to its size.
-
-Expected CSV columns (pre-processed):
-
-```
-QuantityCat, UnitPriceCat, InvoiceMonth, InvoiceHour, Country, IsCancelled
 ```
 
 ## Running the Code
@@ -78,7 +67,8 @@ The script will:
 ```
 .
 ├── code.py                      # Main classifier script
-├── requirements.txt             # Python dependencies
+├── online_retail.csv            # Input dataset
 ├── naive_bayes_predictions.csv  # Output predictions (generated on run)
+├── requirements.txt             # Python dependencies
 └── README.md
 ```
