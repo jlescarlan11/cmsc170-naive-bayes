@@ -43,6 +43,8 @@ pip install -r requirements.txt
 
 ## Running the Code
 
+### Original dataset (`code.py`)
+
 ```bash
 python code.py
 ```
@@ -57,18 +59,41 @@ The script will:
 6. Print accuracy, F1 score, classification report, and confusion matrix
 7. Save predictions to `naive_bayes_predictions.csv`
 
+### Oversampled balanced dataset (`code_oversampling.py`)
+
+```bash
+python code_oversampling.py
+```
+
+Uses the same Naive Bayes approach on a class-balanced dataset (`Oversampling_Online_Retail.csv`, 50% cancelled / 50% not cancelled). Features are the same except `Country` is excluded.
+
+The script will:
+
+1. Load and clean the oversampled dataset
+2. Split data 80/20 (stratified) into train and test sets
+3. Build frequency and conditional probability tables (with Laplace smoothing)
+4. Show a step-by-step worked example for one test row
+5. Run predictions on the full test set
+6. Print accuracy, F1 score, classification report, and confusion matrix
+7. Save predictions to `naive_bayes_predictions_oversampling.csv`
+
 ## Output
 
-- **Console** — prior probabilities, per-feature probability tables, a worked example showing all the math, and evaluation metrics
-- **`naive_bayes_predictions.csv`** — the full test set with columns: `P_Cancelled`, `P_NotCancelled`, `Predicted`, `IsCancelled`
+| File | Description |
+|---|---|
+| `naive_bayes_predictions.csv` | Predictions from `code.py` — full test set with `P_Cancelled`, `P_NotCancelled`, `Predicted`, `IsCancelled` |
+| `naive_bayes_predictions_oversampling.csv` | Predictions from `code_oversampling.py` — same columns, oversampled dataset |
 
 ## Project Structure
 
 ```
 .
-├── code.py                      # Main classifier script
-├── online_retail.csv            # Input dataset
-├── naive_bayes_predictions.csv  # Output predictions (generated on run)
-├── requirements.txt             # Python dependencies
+├── code.py                                   # Classifier — original dataset
+├── code_oversampling.py                      # Classifier — oversampled balanced dataset
+├── online_retail.csv                         # Original input dataset
+├── Oversampling_Online_Retail.csv            # Oversampled balanced input dataset
+├── naive_bayes_predictions.csv               # Output predictions from code.py (generated on run)
+├── naive_bayes_predictions_oversampling.csv  # Output predictions from code_oversampling.py (generated on run)
+├── requirements.txt                          # Python dependencies
 └── README.md
 ```

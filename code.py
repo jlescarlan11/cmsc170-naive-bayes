@@ -68,7 +68,6 @@ print(f"Test size: {len(test_df)}")
 
 # ============================================================
 # STEP 3: BUILD FREQUENCY / PROBABILITY TABLES
-# (This is the golf example approach from page 29)
 # ============================================================
 print("\n" + "="*60)
 print("STEP 3: Building probability tables from training data")
